@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="./appjs/app.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+      /* TODO */
+    </style>
+  </head>
+
+  <body>
+    <div class="app-page" data-page="home">
+      <div class="app-topbar">
+        <div class="app-title">Incident Reporter</div>
+      </div>
+      <div class="app-content">
+        <div class="app-section">
+          <div class="app-button" data-target="page2">Dashboard</div>
+        </div>
+        <div class="app-section">
+          <div class="app-button" data-target="page3">INCIDENTS PAGE</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-page" data-page="page2">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">Page 2</div>
+      </div>
+      <div class="app-content">
+        Page 2 is lonely
+      </div>
+    </div>
+
+    <div class="app-page" data-page="page3">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">CV PAGE</div>
+      </div>
+      <div class="app-content">
+
+        <div class="bOdy">
+
+          <div class="welcome-container">
+
+            <div class="welcome-page">
+              <span id="welcome">WELCOME TO MY BLOG APP</span>
+            </div>
+    
+            <div id="action-status">
+              <button>STATUS.</button>
+            </div>
+    
+            <div class="choseactioncontainer">
+              <button id="view-post">View Post</button>
+              <button id="make-post">Post</button>
+            </div>
+    
+          </div>
+    
+         <!-- retrieved post section -->
+    
+          <div class="view-blog-result-container">
+    
+            <div class="label-container">
+              <span id="label">Search by categories</span><br>
+              <span id="category-status"></span>
+            </div>
+
+            <form class="get-post-form">
+
+              <div class="search-container">
+                <img src="./img/search.svg">
+                <input id="searc-input" placeholder="e.g Riot, Accident etc" type="text">
+  
+              </div>
+  
+              
+      
+            </form>
+
+            <div class="butt-cont">
+              <button id="to-home-page">Home</button>
+              <button id="get-post-request" type="submit">Get Post</button>
+            </div>
+
+            <div id="post-contents-retrieved">
+                 
+            </div>
+    
+          
+
+          
+             
+    
+              
+    
+    
+            <!-- chrome.exe --disable-web-security--user-data-dir="C:\ChromeDevSession" -->
+    
+            
+            
+    
+            
+          </div>
+    
+          <!-- post making form -->
+    
+          <div class="make-post-contaner">
+    
+            <div class="native-function-container">
+    
+              <button id="take-pics">Take Picture</button>
+              <button id="add-location">Add Location</button>
+    
+            </div>
+    
+            <div class="native-results-container">
+              <img id="plu-image" src="./img/Image (1).png">
+    
+              <ul class="location-reults">
+                <li id = "long"></li>
+                <li id = "lat"></li>
+              </ul>
+    
+            </div>
+    
+            <form class="fOrm">
+    
+              <div class="username-control">
+                <div class="label_e">
+                 <label for="mAIL">Categories</label>
+                  <p id="error_user_name">This field is required</p>
+                </div>
+                 <input id="user-name" placeholder="e.g Rioting, Accident">
+              </div>
+    
+    
+              <div class="titlecontrol">
+                <div class="label_e">
+                  <label for="fullName">title</label>
+                  <p id="error_title">This field is required</p>
+                </div>
+                <input id="content-title" type="text" placeholder="API Class">
+              </div>
+    
+    
+             <div class="contentcontrol">
+                <div class="label_e">
+                  <label for="number">content</label>
+                  <p id="error_content">This field is required</p>
+                </div>
+                  <input id="post-content-oveview" type="text" placeholder="lorem ipsum lorem ipsum lorem ipsum lorem ">
+              </div>
+    
+              <div class="submit-button-container">
+                <button id="submit-post" type="submit">Verify Details</button>
+                <button id="make-post-req">Make Post</button>
+              </div>
+              
+            </form>
+    
+    
+            <!-- success message section -->
+    
+            <div class="sucess_message">
+              <p id="success">PROCESSING</p>
+              <div class="bak-butt-cont">
+                <button id="back-to-welcome-from-post-success">WELCOME PAGE</button>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+    
+
+        </div>
+
+
+
+
+
+
+      
+      </div>
+    </div>
+
+    <script src="./appjs/zepto.js"></script>
+    <script src="./appjs/app.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+      App.controller('home', function (page) {
+        // put stuff here
+      });
+
+      App.controller('page2', function (page) {
+        // put stuff here
+      });
+
+       
+
+      try {
+        App.restore();
+      } catch (err) {
+        App.load('home');
+      }
+    </script>
+  </body>
+</html>
